@@ -14,6 +14,7 @@ img {
     max-width: 100%;
 }
 
+/* GLOBAL STYLES */
 :root {
     --black: #000000;
     --white: #ffffff;
@@ -27,11 +28,15 @@ img {
 body {
     font-family: Poppins;
     font-size: 1.125rem;
-    color: black;
+    color: white;
     background-color: #063270;
     margin: 0;
     padding: 0;
     line-height: 1.5;
+}
+
+a {
+    color: white;
 }
 
 main {
@@ -49,10 +54,6 @@ header {
     justify-content: center;
     align-items: center;
     gap: 1rem;
-}
-
-h1 {
-    font-size: 3rem;
 }
 
     h2 {
@@ -75,4 +76,36 @@ h1 {
 .wrapper {
     max-width: 1200px;
     margin: 0 auto;
+}
+
+/* HEADER */
+header {
+    padding: 0.5rem 1rem;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+    /* NAV */
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+        display: flex;
+        gap: 1rem;
+    }
+
+        nav a {
+            text-decoration: none;
+        }
+
+
+/* MEDIA QUERIES */
+@media (min-width: 650px) {
+    h1 {
+        font-size: 3rem;
+    }
 }
