@@ -12,49 +12,41 @@ html {
 
 img {
     max-width: 100%;
+    border-radius: 10px;
 }
 
 /* GLOBAL STYLES */
 :root {
     --black: #000000;
     --white: #ffffff;
-    --catalina: #06327d;
-    --bluetiful: #2b70e4;
-    --vegan: #209d5c;
-    --sunglow: #ffd034;
+    --darkblue: #06327d;
+    --blue: #2b70e4;
+    --green: #209d5c;
+    --yellow: #ffd034;
     --lightblue: #cadbf8;
 }
 
 body {
     font-family: Poppins;
     font-size: 1.125rem;
-    color: white;
-    background-color: #063270;
     margin: 0;
     padding: 0;
     line-height: 1.5;
 }
 
 a {
-    color: white;
+    color: var(--white);
 }
 
 main {
-    background-color: white;
+    background-color: var(--lightblue);
     border-bottom: 5px solid #ffd034;
     border-top: 5px solid #ffd034;
 }
 
-header {
-    color: white;
-    text-transform: uppercase;
-    font-weight: normal;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-}
+h1 {
+        font-size: 3rem;
+    }
 
     h2 {
         font-size: 2.5rem;
@@ -78,9 +70,29 @@ header {
     margin: 0 auto;
 }
 
+/* BUTTONS */
+.button {
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+    a.button {
+        text-decoration: none;
+        text-transform: uppercase;
+        background-color: var(--darkblue);
+        color: var(--white);
+    }
+
 /* HEADER */
 header {
-    padding: 0.5rem 1rem;
+    color: var(--white);
+    text-transform: uppercase;
+    font-weight: normal;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 0.5rem 0;
+    background-color: #063270;
 }
 
 .logo {
@@ -102,10 +114,23 @@ header {
             text-decoration: none;
         }
 
+/* HERO */
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 2rem;
+    gap: 2rem;
+    align-items:center;
+    color: var(--black);
+    background-color: var(--white);
+}
 
-/* MEDIA QUERIES */
-@media (min-width: 650px) {
-    h1 {
-        font-size: 3rem;
-    }
+.hero a {
+    background-color: var(--green);
+}
+
+/* GRID */
+.grid-container {
+    display: grid;
+    padding: 1rem;
 }
