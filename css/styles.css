@@ -134,6 +134,10 @@ header, footer {
     background-color: var(--green);
 }
 
+.intro {
+    padding: 1rem 0;
+}
+
 /* GRID */
 .grid-container {
     display: grid;
@@ -147,4 +151,15 @@ footer {
     color: var(--white);
     flex-direction: column;
     align-items: center;
+}
+
+/* MEDIA QUERIES */
+@media (min-width: 650px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    h2 {
+        grid-column: 1 / 3;
+    }
 }
