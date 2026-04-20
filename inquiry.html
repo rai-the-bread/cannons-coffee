@@ -27,15 +27,43 @@
             </nav>
         </header>
         <main>
-            <div class="hero">
-                <img src="images/latte.jpg" alt="Latte in a cup">
-                <div>
-                    <h1>INQUIRY</h1>
-                    <p>One shot of espresso coffee plus plenty of steamed milk. Choose skim milk, regular milk, or oat
-                        milk.
-                    </p>
-                    <a class="button" href="#">Order Now</a>
-                </div>
+            <div class="hero" id="form-container">
+                <h1>WANT TO ORDER?</h1>
+                <form>
+                    <div>
+                        <label for="name">Name</label>
+                        <input type="text" id="name" placeholder="Your Name">
+                    </div>
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="yourname@email.com">
+                    </div>
+                    <div>
+                        <label for="phone">Phone #</label>
+                        <input type="tel" id="phone" placeholder="123-456-7890">
+                    </div>
+                    <div>
+                        <label for="comments">Comments</label>
+                        <textarea name="comments" id="comments" cols="30" rows="10"></textarea>
+                    </div>
+                    <div>
+                        <label for="flavor">Coffee Flavor</label>
+                        <select name="flavor" id="flavor">
+                            <option value="">--Choose Flavor--</option>
+                            <option value="hazelnut">Hazelnut</option>
+                            <option value="caramel">Caramel</option>
+                            <option value="mocha">Mocha</option>
+                        </select>
+                    </div>
+                    <fieldset>
+                        <legend>Are you purchasing coffee or seeking employment?</legend>
+                        <label for="coffee">Buying Coffee</label>
+                        <input type="radio" id="coffee" value="coffee" name="interest">
+                        <label for="employment">Seeking Employment</label>
+                        <input type="radio" id="employment" value="employment" name="interest">
+                    </fieldset>
+                    <button type="submit">Start Brewing!</button>
+                </form>
             </div>
         </main>
         <footer>

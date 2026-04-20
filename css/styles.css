@@ -135,6 +135,21 @@ header {
     padding: 1rem 0;
 }
 
+/* FORMS */
+label, input {
+    display: block;
+}
+
+form > div {
+    margin: 1rem 0;
+}
+
+#form-container {
+    display: block;
+    max-width: 600px;
+    margin: 1rem auto;
+}
+
 /* GRID */
 .grid-container {
     display: grid;
