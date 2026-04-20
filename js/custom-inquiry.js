@@ -1,0 +1,1 @@
+console.log("Inquiry JS Working");
