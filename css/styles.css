@@ -97,10 +97,6 @@ header {
     padding: 0.5rem 0;
 }
 
-header, footer {
-    background-color: #063270;
-}
-
 .logo {
     display: flex;
     justify-content: center;
