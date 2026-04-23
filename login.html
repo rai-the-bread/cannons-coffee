@@ -31,10 +31,21 @@
                 <img src="images/latte.jpg" alt="Latte in a cup">
                 <div>
                     <h1>LOGIN</h1>
-                    <p>One shot of espresso coffee plus plenty of steamed milk. Choose skim milk, regular milk, or oat
-                        milk.
-                    </p>
-                    <a class="button" href="#">Order Now</a>
+                    <form id="inquiry-form">
+                        <div>
+                            <label for="name">Name</label>
+                            <input name="name" type="text" id="name" placeholder="Your Name" required>
+                        </div>
+                        <div>
+                            <label for="email">Email</label>
+                            <input name="email" type="email" id="email" placeholder="yourname@email.com" required>
+                        </div>
+                        <div>
+                            <label for="password">Password</label>
+                            <input name="password" type="password" id="password" required>
+                        </div>
+                        <button type="submit">Log In!</button>
+                    </form>
                 </div>
             </div>
         </main>
