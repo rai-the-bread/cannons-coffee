@@ -73,6 +73,10 @@ h1 {
     margin: 0 auto;
 }
 
+.hidden {
+    display: none;
+}
+
 /* BUTTONS */
 .button {
     padding: 0.5rem 1rem;
