@@ -27,26 +27,27 @@
             </nav>
         </header>
         <main>
-            <div class="hero">
-                <img src="images/latte.jpg" alt="Latte in a cup">
-                <div>
-                    <h1>LOGIN</h1>
-                    <form id="inquiry-form">
-                        <div>
-                            <label for="name">Name</label>
-                            <input name="name" type="text" id="name" placeholder="Your Name" required>
-                        </div>
-                        <div>
-                            <label for="email">Email</label>
-                            <input name="email" type="email" id="email" placeholder="yourname@email.com" required>
-                        </div>
-                        <div>
-                            <label for="password">Password</label>
-                            <input name="password" type="password" id="password" required>
-                        </div>
-                        <button type="submit">Log In!</button>
-                    </form>
+            <div class="hero" id="form-container">
+                <h2>LOGIN</h2>
+                <form id="login-form">
+                    <div>
+                        <label for="name">Name</label>
+                        <input name="name" type="text" id="name" placeholder="Your Name" required>
+                    </div>
+                    <div>
+                        <label for="email">Email</label>
+                        <input name="email" type="email" id="email" placeholder="yourname@email.com" required>
+                    </div>
+                    <div>
+                        <label for="password">Password</label>
+                        <input name="password" type="password" id="password" required>
+                    </div>
+                    <button type="submit">Log In!</button>
+                </form>
+                <div class="login-message">
+                    <p></p>
                 </div>
+                <button id="order-again" class="hidden">Order Again</button>
             </div>
         </main>
         <footer>

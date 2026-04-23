@@ -1,6 +1,6 @@
 const form = document.querySelector("#inquiry-form");
 const inquiryMessage = document.querySelector(".inquiry-message p");
-const h1 = document.querySelector("#form-container h1");
+const h2 = document.querySelector("#form-container h2");
 const orderAgain = document.querySelector("#order-again");
 
 function onFormSubmit(event) {
@@ -23,9 +23,6 @@ function onFormSubmit(event) {
     const message = `We appreciate your interest in ${interest}. Your favorite coffee flavor is ${flavor || "N/A"} and your comments are "${comments || "N/A"}." We will soon contact you at ${email} or ${phone}`;
 
     showMessage(message, name);
-    console.log(message);
-
-    // TO DO: hide form, show message, have order again button
 };
 
 function showMessage(message, name) {
@@ -33,7 +30,7 @@ function showMessage(message, name) {
     orderAgain.classList.remove("hidden");
     inquiryMessage.classList.remove("hidden");
     // create paragraph
-    h1.textContent = `Thanks for ordering, ${name}!`;
+    h2.textContent = `Thanks for ordering, ${name}!`;
     inquiryMessage.textContent = message;
 };
 
@@ -42,15 +39,5 @@ orderAgain.addEventListener("click", () => {
     form.classList.remove("hidden")
     orderAgain.classList.add("hidden");
     inquiryMessage.classList.add("hidden");
-    h1.textContent = "Order A Drink";
+    h2.textContent = "Order A Drink";
 });
-
-/* {
-comments: "here is a comment"
-email: "rai@anniecannons.com"
-flavor: "mocha"
-interest: "employment"
-name: "Rai Dorzback"
-phone: "555-555-5555"
-}
-*/
