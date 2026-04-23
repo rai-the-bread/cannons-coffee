@@ -163,6 +163,8 @@ form {
         fieldset {
             padding: 0.5rem;
             width: 20rem;
+            border-radius: var(--radius);
+            border: 2px solid var(--darkblue);
         }
 
             button[type="submit"] {
