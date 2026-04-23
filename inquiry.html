@@ -32,15 +32,15 @@
                 <form id="inquiry-form">
                     <div>
                         <label for="name">Name</label>
-                        <input name="name" type="text" id="name" placeholder="Your Name">
+                        <input name="name" type="text" id="name" placeholder="Your Name" required>
                     </div>
                     <div>
                         <label for="email">Email</label>
-                        <input name="email" type="email" id="email" placeholder="yourname@email.com">
+                        <input name="email" type="email" id="email" placeholder="yourname@email.com" required>
                     </div>
                     <div>
                         <label for="phone">Phone #</label>
-                        <input name="phone" type="tel" id="phone" placeholder="123-456-7890">
+                        <input name="phone" type="tel" id="phone" placeholder="123-456-7890" required>
                     </div>
                     <div>
                         <label for="comments">Comments</label>
@@ -64,6 +64,10 @@
                     </fieldset>
                     <button type="submit">Start Brewing!</button>
                 </form>
+                <div class="inquiry-message">
+                    <p></p>
+                </div>
+                <button id="order-again" class="hidden">Order Again</button>
             </div>
         </main>
         <footer>

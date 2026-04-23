@@ -1,4 +1,7 @@
 const form = document.querySelector("#inquiry-form");
+const inquiryMessage = document.querySelector(".inquiry-message p");
+const h1 = document.querySelector("#form-container h1");
+const orderAgain = document.querySelector("#order-again");
 
 function onFormSubmit(event) {
     console.log("function is running");
@@ -10,18 +13,37 @@ function onFormSubmit(event) {
     
     // save variables from form
     const name = dataObject.name;
-    const interest = dataObject.name == "employment" ? "seeking employment" : "buying coffee";
+    const interest = dataObject.interest == "employment" ? "seeking employment" : "buying coffee";
     const flavor = dataObject.flavor;
     const comments = dataObject.comments;
     const email = dataObject.email;
     const phone = dataObject.phone;
 
     // create message
-    const message = `Thank you ${name}! We appreciate your interest in ${interest}. Your favorite coffee flavor is ${flavor} and your comments are "${comments}." We will soon contact you at ${email} or ${phone}`
+    const message = `We appreciate your interest in ${interest}. Your favorite coffee flavor is ${flavor || "N/A"} and your comments are "${comments || "N/A"}." We will soon contact you at ${email} or ${phone}`;
+
+    showMessage(message, name);
     console.log(message);
-}
+
+    // TO DO: hide form, show message, have order again button
+};
+
+function showMessage(message, name) {
+    form.classList.add("hidden");
+    orderAgain.classList.remove("hidden");
+    inquiryMessage.classList.remove("hidden");
+    // create paragraph
+    h1.textContent = `Thanks for ordering, ${name}!`;
+    inquiryMessage.textContent = message;
+};
 
 form.addEventListener("submit", onFormSubmit);
+orderAgain.addEventListener("click", () => {
+    form.classList.remove("hidden")
+    orderAgain.classList.add("hidden");
+    inquiryMessage.classList.add("hidden");
+    h1.textContent = "Order A Drink";
+});
 
 /* {
 comments: "here is a comment"
